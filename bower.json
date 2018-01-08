@@ -1,0 +1,32 @@
+{
+  "name": "ng-websocket-chat",
+  "version": "0.0.1",
+  "main": "./dist/ng-websocket-chat.js",
+  "description": "",
+  "homepage": "https://gitlab.trinom.io/fmieres/ng-websocket-chat",
+  "private": false,
+  "authors": [
+    "fmieres"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git://gitlab.trinom.io/fmieres/ng-websocket-chat.git"
+  },
+  "keywords": [
+    "angular"
+  ],
+  "license": "MIT",
+  "devDependencies": {
+    "angular": "1.2.x",
+    "angular-mocks": "~1.2.x"
+  },
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "build.conf.js",
+    "gulpfile.js",
+    "karma.conf.js",
+    "package.json"
+  ]
+}
