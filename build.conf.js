@@ -6,7 +6,7 @@ module.exports = {
   srcJs: ['src/**/*.module.js', 'src/**/*.js', '!src/**/*_test.js'],
   tests: 'src/**/*_test.js',
   buildFolder: 'dist',
-  buildJsFilename: 'ng-websocket-chat.js',
+  buildJsFilename: 'ng-websocket-for-rtc.js',
   banner: '/*!\n' +
     ' * See LICENSE in this repository for license information\n' +
     ' */\n',

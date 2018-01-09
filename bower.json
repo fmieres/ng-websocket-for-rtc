@@ -1,7 +1,7 @@
 {
   "name": "ng-websocket-for-rtc",
   "version": "0.0.1",
-  "main": "./dist/ng-websocket-chat.js",
+  "main": "./dist/ng-websocket-for-rtc.js",
   "description": "",
   "homepage": "https://github.com/fmieres/ng-websocket-for-rtc",
   "private": false,
