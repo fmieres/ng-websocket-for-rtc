@@ -25,7 +25,7 @@
       return client;
     }]
 
-    function WebSocketClient(url){
+    function WebSocketClient($websocket, url){
       var me = this;
   
       var CONNECTION_CLOSED_ABNORMALLY = 1006;
