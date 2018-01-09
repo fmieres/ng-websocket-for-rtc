@@ -13,7 +13,7 @@
 
     me.setICEServers = setICEServers;
     me.$get = $get;
-    me.setType
+    me.setType = setType
 
 
     me.LISTENER = LISTENER;
