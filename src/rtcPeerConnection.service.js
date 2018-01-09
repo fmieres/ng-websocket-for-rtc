@@ -1,9 +1,9 @@
 (function(){
   'use strict';
 
-  angular.module('ng-websocket-for-rtc').provider('RtcPeerConnection', RtcPeerConnectionProvider);
+  angular.module('ng-websocket-for-rtc').provider('RTCPeerConnection', RTCPeerConnectionProvider);
 
-  function RtcPeerConnectionProvider(){
+  function RTCPeerConnectionProvider(){
     var me = this;
     var ICEServers = [] ;
 
@@ -29,7 +29,6 @@
 
         instance.peer = new RTCConnectionClient(webSocketInterface, configs, callbacks);
       }
-
       return instance;
     }
   }
