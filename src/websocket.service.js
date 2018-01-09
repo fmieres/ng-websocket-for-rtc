@@ -1,7 +1,7 @@
 (function(){
   'use strict';
 
-  angular.module('ng-websocket-chat').provider('WebSocket', WebSocketProvider)
+  angular.module('ng-websocket-for-rtc').provider('WebSocket', WebSocketProvider)
 
   function WebSocketProvider(){
     var me = this;

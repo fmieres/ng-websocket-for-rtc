@@ -1,4 +1,4 @@
 'use strict';
 
 angular
-  .module('ng-websocket-chat', ['ngWebSocket']);
+  .module('ng-websocket-for-rtc', ['ngWebSocket']);
