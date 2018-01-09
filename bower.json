@@ -1,16 +1,16 @@
 {
-  "name": "ng-websocket-chat",
+  "name": "ng-websocket-for-rtc",
   "version": "0.0.1",
   "main": "./dist/ng-websocket-chat.js",
   "description": "",
-  "homepage": "https://gitlab.trinom.io/fmieres/ng-websocket-chat",
+  "homepage": "https://github.com/fmieres/ng-websocket-for-rtc",
   "private": false,
   "authors": [
     "fmieres"
   ],
   "repository": {
     "type": "git",
-    "url": "git://gitlab.trinom.io/fmieres/ng-websocket-chat.git"
+    "url": "git://github.com/fmieres/ng-websocket-for-rtc.git"
   },
   "keywords": [
     "angular"

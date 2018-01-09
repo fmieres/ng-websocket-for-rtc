@@ -1,9 +1,9 @@
 {
-  "name": "ng-websocket-chat",
+  "name": "ng-websocket-for-rtc",
   "private": true,
   "version": "0.0.1",
   "description": "HTML5 based Copy-to-Clipboard with AngularJS",
-  "repository": "https://gitlab.trinom.io/fmieres/ng-websocket-chat",
+  "repository": "https://github.com/fmieres/ng-websocket-for-rtc",
   "license": "MIT",
   "devDependencies": {
     "extend": "~2.0.0",
