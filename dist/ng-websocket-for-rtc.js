@@ -12,7 +12,7 @@ angular
 
   angular.module('ng-websocket-for-rtc').provider('RtcPeerConnection', RtcPeerConnectionProvider);
 
-  function RtcPeerConnection(){
+  function RtcPeerConnectionProvider(){
     var me = this;
     var ICEServers = [] ;
 
