@@ -81,7 +81,7 @@
       }
 
       function callSelfEvent(keyword, event, feed){
-        return me.$register.hasCallback(keyword) || me.$register_once.hasCallback(data.keyword)
+        return me.$register.hasCallback(keyword) || me.$register_once.hasCallback(keyword)
             ? callOnAllCallbacks(keyword, [event, feed])/*me.$register.callbacks(data.keyword).forEach(function(fx){fx(data.data, data.sender, messageEvent)})*/
             : noop(event,feed)
         // !!me.$register[keyword] ?  me.$register[keyword](event, feed) : noop(event, feed)
