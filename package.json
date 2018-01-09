@@ -2,7 +2,7 @@
   "name": "ng-websocket-for-rtc",
   "private": true,
   "version": "0.0.1",
-  "description": "HTML5 based Copy-to-Clipboard with AngularJS",
+  "description": "",
   "repository": "https://github.com/fmieres/ng-websocket-for-rtc",
   "license": "MIT",
   "devDependencies": {
