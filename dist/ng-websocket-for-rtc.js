@@ -12,13 +12,25 @@ angular
 
   angular.module('ng-websocket-for-rtc').provider('RTCPeerConnection', RTCPeerConnectionProvider);
 
+  var LISTENER = 0;
+  var SPEAKER = 1;
+
   function RTCPeerConnectionProvider(){
     var me = this;
-    var ICEServers = [] ;
-
+    var ICEServers = [];
+    var type = SPEAKER;
 
     me.setICEServers = setICEServers;
     me.$get = $get;
+    me.setType
+
+
+    me.LISTENER = LISTENER;
+    me.SPEAKER  = SPEAKER;
+
+    function setType(value){
+      type = ( value === SPEAKER || value === LISTENER ) ? value : SPEAKER
+    }
 
     function setICEServers(servers){
       ICEServers = servers;
@@ -32,8 +44,10 @@ angular
 
       function initialize(webSocketInterface, configs, callbacks){
         configs = configs || { 
-          servers : { iceServers : ICEServers }
+          servers : { iceServers : ICEServers },
+          socketType : type
         };
+
         callbacks = callbacks || {};
 
         instance.peer = new RTCConnectionClient(webSocketInterface, configs, callbacks);
@@ -49,10 +63,14 @@ angular
 
     me.sendVideo = sendVideo
     me.sendMessage = sendChatMessage
-    me.queue = queueAsListener
+    me.queue = configs.socketType === SPEAKER ? queueAsSpeaker : queueAsListener 
 
     function queueAsListener(){
       webSocketInterface.serverSend( {type : 'queue_as_listener' } )
+    }
+
+    function queueAsSpeaker(){
+      webSocketInterface.serverSend( {type : 'queue_as_speaker' } )
     }
 
     function sendChatMessage(text, id){
@@ -125,7 +143,6 @@ angular
     var sendMessage = webSocketInterface.send
 
     function acceptSpeaker(){
-      console.log('log: ','accept');
       webSocketInterface.serverSend( { type : 'accept_speaker' } )
     }
 
