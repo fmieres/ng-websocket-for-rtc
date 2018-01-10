@@ -136,9 +136,9 @@ angular
     }
 
     webSocketInterface.on_once('channel_webrtc', readMessage)
-    webSocketInterface.on_once('ack_message_received', function(){})
-    webSocketInterface.on_once('ask_take_call', acceptSpeaker)
-    webSocketInterface.on_once('assert_connected_with_pair', connect )
+    webSocketInterface.on_once('ack_message_received', noop )
+    webSocketInterface.on_once('ask_take_call', acceptSpeaker )
+    webSocketInterface.on_once('assert_connected_with_pair', configs.socketType === SPEAKER ? noop : connect )
 
     var sendMessage = webSocketInterface.send
 
