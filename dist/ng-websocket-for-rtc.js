@@ -101,6 +101,8 @@ angular
       var data = JSON.parse(messageEvent.data)
       if ( data.type === 'chat' ) {
         callbacks.onMessageReceived(data.value)
+        sendChannel.send(JSON.stringify({value : 'ack_message_received', type : 'system', id : data.id}))
+
       } else if (data.type === 'system') {
         switch(data.value) {
           case 'ack_message_received' : 
