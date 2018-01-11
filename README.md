@@ -66,7 +66,9 @@ ngModule.config(function(WebSocketProvider, RTCPeerConnectionProvider){
   WebSocketProvider.webSocketUrl("MyWebsocketServerUrl")
   RTCPeerConnectionProvider.setICEServers([
     { urls : "turn:myTurnServerIp", credential : "password", username :"username" }
-    ]))
+  ])
+  RTCPeerConnectionProvider.setType(RTCPeerConnectionProvider.LISTENER) // default SPEAKER
+}
 ```
 
 
